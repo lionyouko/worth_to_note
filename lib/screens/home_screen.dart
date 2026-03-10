@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:worth_to_note/feature_todos/presentation/widgets/add_todo_dialog_widget.dart';
-import 'package:worth_to_note/feature_todos/presentation/widgets/todo_list_widget.dart';
+import 'package:worth_to_note/feature_todos/presentation/widgets/todo_list_blocbuilder_wrapper_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -30,24 +32,27 @@ class HomeScreen extends StatelessWidget {
         },
         child: const Icon(Icons.add),
       ),
-      body: const Column(
-        children: [
-          Center(
-            child: Text(
-              'Click on the + button to add a new todo',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'Click on the + button to add a new todo',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 16),
-          Expanded(
-            child: TodoListWidget(
-              todos: [],
+            SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              height: screenHeight * 0.6,
+              child: TodoListBlocBuilderWrapperWidget(),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

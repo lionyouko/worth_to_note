@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:worth_to_note/feature_todos/domain/entities/todo.dart';
+import 'package:worth_to_note/feature_todos/domain/entities/todo_entity.dart';
 
 sealed class TodoCubitState extends Equatable {
   const TodoCubitState();
@@ -17,9 +17,12 @@ class TodoCubitLoading extends TodoCubitState {
 }
 
 class TodoCubitLoaded extends TodoCubitState {
-  final List<Todo>? todos;
+  final List<TodoEntity>? todos;
 
   const TodoCubitLoaded({this.todos});
+
+  @override
+  List<Object?> get props => [todos];
 }
 
 class TodoCubitError extends TodoCubitState {

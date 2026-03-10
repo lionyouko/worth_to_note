@@ -1,6 +1,7 @@
 abstract class TodoModel {
-  String? get id;
+  int? get id;
   String? get title;
   String? get description;
   bool? get isDone;
+  DateTime? get createdAt;
 }

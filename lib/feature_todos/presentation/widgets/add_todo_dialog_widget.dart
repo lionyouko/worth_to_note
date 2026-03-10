@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:worth_to_note/di/service_locator.dart';
+import 'package:worth_to_note/feature_todos/domain/entities/todo_entity.dart';
+import 'package:worth_to_note/feature_todos/presentation/cubits/todo_cubit.dart';
 
 class AddTodoDialogWidget extends StatefulWidget {
   final BuildContext externalContext;
@@ -29,38 +32,65 @@ class _AddTodoDialogWidgetState extends State<AddTodoDialogWidget> {
     super.dispose();
   }
 
+  void _addTodo() {
+    final title = newAdviceTitleTextEditingController.text.trim();
+    if (title.isEmpty) {
+      ScaffoldMessenger.of(widget.externalContext).showSnackBar(
+        const SnackBar(content: Text('Title cannot be empty')),
+      );
+      return;
+    }
+
+    sl<TodoCubit>().addTodo(
+      TodoEntity(
+        title: title,
+        description: newAdviceDescriptionTextEditingController.text.trim(),
+        isDone: false,
+        createdAt: DateTime.now(),
+      ),
+    );
+
+    Navigator.of(widget.externalContext).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (externalContext) {
-        return AlertDialog(
-          title: const Text('Add New Todo Note',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              )),
-          content: Column(
-            children: [
-              TextField(
-                controller: newAdviceTitleTextEditingController,
-                decoration: const InputDecoration(labelText: 'Title'),
-              ),
-              TextField(
-                controller: newAdviceDescriptionTextEditingController,
-                decoration: const InputDecoration(labelText: 'Description'),
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                // Handle add todo action
-              },
-              child: const Text('Add'),
+    return Dialog(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Add New Todo Note',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                )),
+            TextField(
+              controller: newAdviceTitleTextEditingController,
+              decoration: const InputDecoration(labelText: 'Title'),
+            ),
+            TextField(
+              controller: newAdviceDescriptionTextEditingController,
+              decoration: const InputDecoration(labelText: 'Description'),
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () => Navigator.of(widget.externalContext).pop(),
+                  child: const Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: _addTodo,
+                  child: const Text('Add'),
+                ),
+              ],
             ),
           ],
-        );
-      },
+        ),
+      ),
     );
   }
 }
