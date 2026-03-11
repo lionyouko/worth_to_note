@@ -1,4 +1,4 @@
-import 'package:isar/isar.dart';
+import 'package:isar_community/isar.dart';
 import 'package:worth_to_note/feature_todos/data/exceptions/add_todo_exception.dart';
 import 'package:worth_to_note/feature_todos/data/exceptions/delete_todo_exception.dart';
 import 'package:worth_to_note/feature_todos/data/exceptions/listen_todo_exception.dart';

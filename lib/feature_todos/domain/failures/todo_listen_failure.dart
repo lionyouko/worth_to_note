@@ -3,11 +3,11 @@ import 'package:worth_to_note/feature_todos/domain/failures/todo_failure.dart';
 
 part 'todo_listen_failure.freezed.dart';
 
+const kTodoListenFailureMessage =
+    'Failed to listen to todos. Please try again.';
+
 @freezed
 sealed class TodoListenFailure with _$TodoListenFailure implements TodoFailure {
-  static const String kTodoListenFailureMessage =
-      'Failed to listen to todos. Please try again.';
-
   const factory TodoListenFailure({
     @Default(kTodoListenFailureMessage) String failureMessage,
   }) = _TodoListenFailure;

@@ -1,11 +1,9 @@
 import 'package:equatable/equatable.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:isar/isar.dart';
+import 'package:isar_community/isar.dart';
 import 'package:worth_to_note/feature_todos/data/models/todo_model.dart';
 
 part 'todo_isar_model.g.dart';
 
-@JsonSerializable()
 @Collection(inheritance: false)
 class TodoIsarModel extends Equatable implements TodoModel {
   @override

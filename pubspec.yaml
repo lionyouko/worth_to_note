@@ -9,25 +9,27 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  freezed_annotation:
-  equatable:
-  json_annotation:
-  flutter_bloc:
-  bloc:
-  get_it:
-  dartz:
-  isar:
-  isar_flutter_libs:
-  path_provider:
+  freezed_annotation: ^3.1.0
+  equatable: ^2.0.5
+  json_annotation: ^4.8.1
+  flutter_bloc: ^9.1.1
+  bloc: ^9.2.0
+  get_it: ^9.2.1
+  dartz: ^0.10.1
+  isar_community: ^3.3.0
+  isar_community_flutter_libs: ^3.3.0
+  path_provider: ^2.1.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
-  build_runner:
-  isar_generator:
-  freezed:
-  json_serializable:
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.11
+  isar_community_generator: ^3.3.0
+  freezed: ^3.2.3
+  json_serializable: ^6.7.1
+  mocktail: ^1.0.3
+  bloc_test: ^10.0.0
 
 flutter:
   uses-material-design: true

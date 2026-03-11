@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,106 +9,26 @@ part of 'delete_todo_failure.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DeleteTodoFailure {
-  String get failureMessage => throw _privateConstructorUsedError;
+  String get failureMessage;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteTodoFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $DeleteTodoFailureCopyWith<DeleteTodoFailure> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DeleteTodoFailureCopyWith<$Res> {
-  factory $DeleteTodoFailureCopyWith(
-          DeleteTodoFailure value, $Res Function(DeleteTodoFailure) then) =
-      _$DeleteTodoFailureCopyWithImpl<$Res, DeleteTodoFailure>;
-  @useResult
-  $Res call({String failureMessage});
-}
-
-/// @nodoc
-class _$DeleteTodoFailureCopyWithImpl<$Res, $Val extends DeleteTodoFailure>
-    implements $DeleteTodoFailureCopyWith<$Res> {
-  _$DeleteTodoFailureCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failureMessage = null,
-  }) {
-    return _then(_value.copyWith(
-      failureMessage: null == failureMessage
-          ? _value.failureMessage
-          : failureMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$DeleteTodoFailureImplCopyWith<$Res>
-    implements $DeleteTodoFailureCopyWith<$Res> {
-  factory _$$DeleteTodoFailureImplCopyWith(_$DeleteTodoFailureImpl value,
-          $Res Function(_$DeleteTodoFailureImpl) then) =
-      __$$DeleteTodoFailureImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String failureMessage});
-}
-
-/// @nodoc
-class __$$DeleteTodoFailureImplCopyWithImpl<$Res>
-    extends _$DeleteTodoFailureCopyWithImpl<$Res, _$DeleteTodoFailureImpl>
-    implements _$$DeleteTodoFailureImplCopyWith<$Res> {
-  __$$DeleteTodoFailureImplCopyWithImpl(_$DeleteTodoFailureImpl _value,
-      $Res Function(_$DeleteTodoFailureImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failureMessage = null,
-  }) {
-    return _then(_$DeleteTodoFailureImpl(
-      failureMessage: null == failureMessage
-          ? _value.failureMessage
-          : failureMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DeleteTodoFailureImpl implements _DeleteTodoFailure {
-  const _$DeleteTodoFailureImpl(
-      {this.failureMessage = DeleteTodoFailure.kDeleteTodoFailureMessage});
-
-  @override
-  @JsonKey()
-  final String failureMessage;
-
-  @override
-  String toString() {
-    return 'DeleteTodoFailure(failureMessage: $failureMessage)';
-  }
+      _$DeleteTodoFailureCopyWithImpl<DeleteTodoFailure>(
+          this as DeleteTodoFailure, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteTodoFailureImpl &&
+            other is DeleteTodoFailure &&
             (identical(other.failureMessage, failureMessage) ||
                 other.failureMessage == failureMessage));
   }
@@ -116,22 +36,266 @@ class _$DeleteTodoFailureImpl implements _DeleteTodoFailure {
   @override
   int get hashCode => Object.hash(runtimeType, failureMessage);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'DeleteTodoFailure(failureMessage: $failureMessage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $DeleteTodoFailureCopyWith<$Res> {
+  factory $DeleteTodoFailureCopyWith(
+          DeleteTodoFailure value, $Res Function(DeleteTodoFailure) _then) =
+      _$DeleteTodoFailureCopyWithImpl;
+  @useResult
+  $Res call({String failureMessage});
+}
+
+/// @nodoc
+class _$DeleteTodoFailureCopyWithImpl<$Res>
+    implements $DeleteTodoFailureCopyWith<$Res> {
+  _$DeleteTodoFailureCopyWithImpl(this._self, this._then);
+
+  final DeleteTodoFailure _self;
+  final $Res Function(DeleteTodoFailure) _then;
+
+  /// Create a copy of DeleteTodoFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failureMessage = null,
+  }) {
+    return _then(_self.copyWith(
+      failureMessage: null == failureMessage
+          ? _self.failureMessage
+          : failureMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [DeleteTodoFailure].
+extension DeleteTodoFailurePatterns on DeleteTodoFailure {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_DeleteTodoFailure value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_DeleteTodoFailure value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure():
+        return $default(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_DeleteTodoFailure value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String failureMessage)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure() when $default != null:
+        return $default(_that.failureMessage);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String failureMessage) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure():
+        return $default(_that.failureMessage);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String failureMessage)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _DeleteTodoFailure() when $default != null:
+        return $default(_that.failureMessage);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class _DeleteTodoFailure implements DeleteTodoFailure {
+  const _DeleteTodoFailure({this.failureMessage = kDeleteTodoFailureMessage});
+
+  @override
+  @JsonKey()
+  final String failureMessage;
+
+  /// Create a copy of DeleteTodoFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DeleteTodoFailureCopyWith<_DeleteTodoFailure> get copyWith =>
+      __$DeleteTodoFailureCopyWithImpl<_DeleteTodoFailure>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DeleteTodoFailure &&
+            (identical(other.failureMessage, failureMessage) ||
+                other.failureMessage == failureMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, failureMessage);
+
+  @override
+  String toString() {
+    return 'DeleteTodoFailure(failureMessage: $failureMessage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DeleteTodoFailureCopyWith<$Res>
+    implements $DeleteTodoFailureCopyWith<$Res> {
+  factory _$DeleteTodoFailureCopyWith(
+          _DeleteTodoFailure value, $Res Function(_DeleteTodoFailure) _then) =
+      __$DeleteTodoFailureCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String failureMessage});
+}
+
+/// @nodoc
+class __$DeleteTodoFailureCopyWithImpl<$Res>
+    implements _$DeleteTodoFailureCopyWith<$Res> {
+  __$DeleteTodoFailureCopyWithImpl(this._self, this._then);
+
+  final _DeleteTodoFailure _self;
+  final $Res Function(_DeleteTodoFailure) _then;
+
+  /// Create a copy of DeleteTodoFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteTodoFailureImplCopyWith<_$DeleteTodoFailureImpl> get copyWith =>
-      __$$DeleteTodoFailureImplCopyWithImpl<_$DeleteTodoFailureImpl>(
-          this, _$identity);
+  $Res call({
+    Object? failureMessage = null,
+  }) {
+    return _then(_DeleteTodoFailure(
+      failureMessage: null == failureMessage
+          ? _self.failureMessage
+          : failureMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
-abstract class _DeleteTodoFailure implements DeleteTodoFailure {
-  const factory _DeleteTodoFailure({final String failureMessage}) =
-      _$DeleteTodoFailureImpl;
-
-  @override
-  String get failureMessage;
-  @override
-  @JsonKey(ignore: true)
-  _$$DeleteTodoFailureImplCopyWith<_$DeleteTodoFailureImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

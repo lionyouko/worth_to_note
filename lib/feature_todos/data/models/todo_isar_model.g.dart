@@ -49,7 +49,7 @@ const TodoIsarModelSchema = CollectionSchema(
   getId: _todoIsarModelGetId,
   getLinks: _todoIsarModelGetLinks,
   attach: _todoIsarModelAttach,
-  version: '3.1.0+1',
+  version: '3.3.0',
 );
 
 int _todoIsarModelEstimateSize(
@@ -882,27 +882,3 @@ extension TodoIsarModelQueryProperty
     });
   }
 }
-
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
-
-TodoIsarModel _$TodoIsarModelFromJson(Map<String, dynamic> json) =>
-    TodoIsarModel(
-      id: (json['id'] as num?)?.toInt(),
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      isDone: json['isDone'] as bool?,
-      createdAt: json['createdAt'] == null
-          ? null
-          : DateTime.parse(json['createdAt'] as String),
-    );
-
-Map<String, dynamic> _$TodoIsarModelToJson(TodoIsarModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'title': instance.title,
-      'description': instance.description,
-      'isDone': instance.isDone,
-      'createdAt': instance.createdAt?.toIso8601String(),
-    };
