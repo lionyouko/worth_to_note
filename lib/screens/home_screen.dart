@@ -16,8 +16,10 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
+            color: Colors.blueAccent,
           ),
         ),
+        backgroundColor: Colors.grey[100],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -32,6 +34,7 @@ class HomeScreen extends StatelessWidget {
         },
         child: const Icon(Icons.add),
       ),
+      backgroundColor: Colors.grey[100],
       body: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: Column(
@@ -48,7 +51,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 16),
             SizedBox(
               width: double.infinity,
-              height: screenHeight * 0.6,
+              height: screenHeight * 0.73,
               child: TodoListBlocBuilderWrapperWidget(),
             ),
           ],
