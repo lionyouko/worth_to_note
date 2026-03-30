@@ -23,4 +23,3 @@ This app is a note taker build using CLEAN architecture to teach people the foll
 
 To run the app, you need to have either Android Studio or VSCode With Flutter extension + the requirements missing when you run flutter doctor.
 
-## Downloading the App
